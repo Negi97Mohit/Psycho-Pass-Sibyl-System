@@ -20,13 +20,6 @@ myrecording=sd.rec(int(seconds*fs),samplerate=fs,channels=2)
 sd.wait()  #wait until reording is finished
 print(myrecording)
 write('output.wav',fs,myrecording)
-
-"""record=wave.open("output.wav","r")
-
-#extract raw audio
-signal=record.readframe(-1)
-signal=np.fromstring(signal,"Int16")"""
-
 plt.figure(1)
 plt.title("Signal Wave")
 plt.plot(myrecording)
